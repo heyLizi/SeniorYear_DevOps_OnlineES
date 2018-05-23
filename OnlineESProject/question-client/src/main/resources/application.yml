@@ -1,0 +1,23 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+#  instance:
+#    ip-address: 120.79.89.98
+#    hostname: 120.79.89.98
+
+server:
+  port: 9004
+spring:
+  application:
+    name: question-client
+  datasource:
+    url: jdbc:mysql://107.170.204.204:3306/onlineES?useUnicode=true&characterEncoding=utf-8
+    sql-script-encoding: utf-8
+    username: online
+    password: online
+    driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  config: classpath:logback.xml

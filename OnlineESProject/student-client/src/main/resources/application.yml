@@ -1,0 +1,31 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+server:
+  port: 9001
+  context-path: /OnlineES
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  application:
+    name: student-client
+  jackson:
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://107.170.204.204:3306/onlineES?useUnicode=true&characterEncoding=utf-8
+    sql-script-encoding: utf-8
+    username: online
+    password: online
+    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+logging:
+  config: classpath:logback.xml
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000

@@ -1,0 +1,30 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+#  instance:
+#    ip-address: 120.79.89.98
+#    hostname: 120.79.89.98
+
+server:
+  port: 9005
+spring:
+  application:
+    name: mail-client
+  mail:
+    host: smtp.163.com
+    username: iammengfengfei@163.com
+    password: WangDong0719
+    default-encoding: UTF-8
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+logging:
+  config: classpath:logback.xml
